@@ -1,0 +1,17 @@
+# Virtual environment
+venv/
+
+# Model files
+*.bin
+*.onnx
+*.pt
+*.pth
+*.safetensors
+*.gguf
+app/models/
+
+# Temporary files
+tmp/
+ngrok/
+__pycache__/
+*.py[cod]
