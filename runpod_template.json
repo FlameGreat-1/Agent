@@ -1,0 +1,29 @@
+{
+  "name": "AI Agent with Speech",
+  "description": "Enterprise-grade AI agent with speech-to-text, LLM, and text-to-speech capabilities",
+  "gpu": "NVIDIA A40",
+  "memory": "50 GB",
+  "disk": "50 GB",
+  "ports": [
+    {
+      "port": 8000,
+      "protocol": "http",
+      "name": "API"
+    },
+    {
+      "port": 9090,
+      "protocol": "http",
+      "name": "Metrics"
+    }
+  ],
+  "env": {
+    "API_KEY": {
+      "description": "API key for authentication",
+      "required": true,
+      "default": "7f8e9d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8"
+    }
+  },
+  "commands": [
+    "cd /app && ./scripts/entrypoint.sh"
+  ]
+}
