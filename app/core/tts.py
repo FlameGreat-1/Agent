@@ -10,8 +10,8 @@ import tempfile
 from pathlib import Path
 from typing import Dict, Any, Optional, BinaryIO
 
-from src.config import settings
-from src.utils.logging import log_execution_time
+from app.config import settings
+from app.utils.logging import log_execution_time
 
 logger = logging.getLogger(__name__)
 

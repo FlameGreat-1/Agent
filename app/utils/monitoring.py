@@ -7,7 +7,7 @@ from fastapi import FastAPI, Request, Response
 from prometheus_client import Counter, Histogram, start_http_server
 import logging
 
-from src.config import settings
+from app.config import settings
 
 # Metrics
 REQUEST_COUNT = Counter(

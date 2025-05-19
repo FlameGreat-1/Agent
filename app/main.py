@@ -7,10 +7,10 @@ from fastapi import FastAPI, Depends, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from app.src.api.router import router as api_router
-from app.src.config import settings
-from app.src.utils.logging import setup_logging
-from app.src.utils.monitoring import setup_metrics
+from app.api.router import router as api_router
+from app.config import settings
+from app.utils.logging import setup_logging
+from app.utils.monitoring import setup_metrics
 
 # Setup logging
 logger = logging.getLogger(__name__)

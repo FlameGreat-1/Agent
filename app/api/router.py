@@ -9,18 +9,18 @@ from typing import Optional, Dict, Any
 from fastapi import APIRouter, Depends, HTTPException, status, File, UploadFile, Form, Header
 from fastapi.responses import StreamingResponse
 
-from app.src.api.schemas import (
+from app.api.schemas import (
     TranscriptionRequest, TranscriptionResponse,
     GenerationRequest, GenerationResponse,
     SynthesisRequest, SynthesisResponse,
     ProcessRequest, ProcessResponse,
     ErrorResponse
 )
-from app.src.core.stt import SpeechToTextService
-from app.src.core.llm import LanguageModelService
-from app.src.core.tts import TextToSpeechService
-from app.src.config import settings
-from app.src.utils.monitoring import STT_LATENCY, LLM_LATENCY, TTS_LATENCY
+from app.core.stt import SpeechToTextService
+from app.core.llm import LanguageModelService
+from app.core.tts import TextToSpeechService
+from app.config import settings
+from app.utils.monitoring import STT_LATENCY, LLM_LATENCY, TTS_LATENCY
 
 logger = logging.getLogger(__name__)
 

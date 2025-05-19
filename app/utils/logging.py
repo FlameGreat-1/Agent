@@ -9,7 +9,7 @@ from typing import Callable, Any
 import uuid
 from datetime import datetime
 
-from src.config import settings
+from app.config import settings
 
 def setup_logging():
     """Configure application-wide logging."""
