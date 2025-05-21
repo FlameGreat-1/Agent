@@ -22,8 +22,8 @@ class Settings(BaseSettings):
     API_LOG_LEVEL: str = Field("info", description="API log level")
     
     # Model paths
-    WHISPER_MODEL_PATH: str = Field("/workspace/Agent/app/models/whisper/ggml-large.bin", description="Path to Whisper model")
-    TTS_MODEL_PATH: str = Field("/workspace/Agent/app/models/tts/en-us-kathleen-high.onnx", description="Path to TTS model")
+    WHISPER_MODEL_PATH: str = Field("/workspace/Agent/workspace/Agent/app/models/whisper/ggml-large.bin", description="Path to Whisper model")
+    TTS_MODEL_PATH: str = Field("/workspace/Agent/workspace/Agent/app/models/tts/en-us-kathleen-high.onnx", description="Path to TTS model")
     
     # Ollama settings
     OLLAMA_HOST: str = Field("localhost", description="Ollama host")
@@ -44,7 +44,7 @@ class Settings(BaseSettings):
     
     # Paths
     BASE_DIR: Path = Path("/workspace/Agent/app")
-    TEMP_DIR: Path = Field(Path("/tmp/ai-agent"), description="Temporary directory for processing")
+    TEMP_DIR: Path = Field(Path("/workspace/temp-ai-agent"), description="Temporary directory for processing")
     
     class Config:
         """Pydantic config"""

@@ -1,17 +1,37 @@
-# Virtual environment
+# Virtual environments
 venv/
+env/
+ENV/
+.venv/
 
-# Model files
-*.bin
-*.onnx
-*.pt
-*.pth
-*.safetensors
-*.gguf
-app/models/
+# Models directory (too large)
+models/
+workspace/models/
+
+# Logs
+logs/
+*.log
+
+# Ollama directory
+/ollama/
 
 # Temporary files
-tmp/
-ngrok/
+temp-ai-agent/
+*.tmp
+*.temp
+
+# Environment variables
+.env.local
+.env.*.local
+
+# Cache directories
 __pycache__/
 *.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS specific files
+.DS_Store
+Thumbs.db
