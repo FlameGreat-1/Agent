@@ -8,10 +8,6 @@ from pathlib import Path
 from pydantic_settings import BaseSettings
 from pydantic import Field
 
-# Rest of your config.py file will be preserved
-
-# Rest of your config.py file will be preserved
-
 class Settings(BaseSettings):
     """Application settings loaded from environment variables with defaults."""
     
@@ -29,6 +25,12 @@ class Settings(BaseSettings):
     OLLAMA_HOST: str = Field("localhost", description="Ollama host")
     OLLAMA_PORT: int = Field(11434, description="Ollama port")
     OLLAMA_MODEL: str = Field("agent-model:latest", description="Ollama model name")
+    
+    # RunPod settings
+    RUNPOD_TIMEOUT: int = Field(120, description="RunPod API timeout in seconds")
+    RUNPOD_RETRY_COUNT: int = Field(3, description="Number of retries for RunPod API")
+    RUNPOD_STREAMING_SUPPORTED: bool = Field(True, description="Whether RunPod endpoint supports streaming")
+    RUNPOD_ENDPOINT_ID: Optional[str] = Field(None, description="RunPod endpoint ID")
     
     # Performance settings
     WHISPER_THREADS: int = Field(4, description="Number of threads for Whisper")
