@@ -129,3 +129,10 @@ curl -X POST https://alhgtq3p5oelru-8888.proxy.runpod.net/api/process \
 
 
 These commands can be run from any machine with internet access. The proxy URL makes your API accessible from anywhere, not just from within the pod.
+
+
+
+NOTE THIS ENDPOINT FORMAT FOR WINDOWS CLI:              
+
+curl -X POST https://alhgtq3p5oelru-8888.proxy.runpod.net/api/generate -H "Content-Type: application/json" -H "X-API-Key: 7f8e9d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8" -d "{\"prompt\":\"What is artificial intelligence?\",\"system_prompt\":\"You are a helpful AI assistant.\",\"temperature\":0.7,\"max_tokens\":200,\"stream\":false}"
+
